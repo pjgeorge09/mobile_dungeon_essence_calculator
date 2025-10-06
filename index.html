@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Essence Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Guild Hunt Essence Calculator</h1>
+
+  <form id="essence-form">
+    <!-- 1. VIP Bonus -->
+    <label>
+      <input type="checkbox" id="vip_bonus"> VIP Bonus
+    </label>
+
+    <!-- 2. Twitch Rewards -->
+    <label>
+      <input type="checkbox" id="twitch_rewards"> Twitch Rewards
+    </label>
+
+    <hr>
+
+    <!-- 3. Farming Stage -->
+    <label>Farming Stage:
+      <select id="farming_stage"></select>
+    </label>
+
+    <!-- 4. Level -->
+    <label>Level:
+      <select id="level"></select>
+    </label>
+
+    <!-- 5. Difficulty -->
+    <label>Difficulty:
+      <select id="difficulty">
+        <option value="">Select</option>
+        <option>Easy</option>
+        <option>Medium</option>
+        <option>Hard</option>
+      </select>
+    </label>
+
+    <hr>
+
+    <!-- 6. Essence per Video Chest -->
+    <label>Essence per Video Chest:
+      <input type="number" id="essence_per_video" value="0">
+    </label>
+
+    <hr>
+
+    <!-- 7–9. Streaks -->
+    <label>Elemental Streak:
+      <select id="elemental_streak"></select>
+    </label>
+
+    <label>Equinox Streak:
+      <select id="equinox_streak"></select>
+    </label>
+
+    <label>Starbreaker Streak:
+      <select id="starbreaker_streak"></select>
+    </label>
+
+    <hr>
+
+    <!-- 10. Rough Guild Hunt Essence Bonus -->
+    <label>Rough Guild Hunt Essence Bonus:
+      <input type="number" id="guild_bonus" value="5000">
+    </label>
+
+    <!-- 11. Bonus Essence Rate -->
+    <label>Bonus Essence Rate:
+      <select id="bonus_rate">
+        <option value="0">+0%</option>
+        <option value="0.5">+50%</option>
+        <option value="1.0">+100%</option>
+      </select>
+    </label>
+
+    <!-- 12. Target -->
+    <label>Target:
+      <input type="number" id="target" value="0">
+    </label>
+
+    <hr>
+
+    <button type="button" onclick="calculate()">Calculate Essence</button>
+  </form>
+
+  <h2>Total Essence: <span id="result">0</span></h2>
+
+  <script src="script.js"></script>
+</body>
+</html>
