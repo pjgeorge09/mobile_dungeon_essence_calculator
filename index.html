@@ -2,38 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Essence Calculator</title>
+  <title>Guild Hunt Essence Calculator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Guild Hunt Essence Calculator</h1>
 
   <form id="essence-form">
-    <!-- 1. VIP Bonus -->
-    <label>
-      <input type="checkbox" id="vip_bonus"> VIP Bonus
-    </label>
-
-    <!-- 2. Twitch Rewards -->
-    <label>
-      <input type="checkbox" id="twitch_rewards"> Twitch Rewards
-    </label>
+    <label><input type="checkbox" id="VIP_BONUS_"> VIP Bonus</label>
+    <label><input type="checkbox" id="TWITCH_REWARDS_"> Twitch Rewards</label>
 
     <hr>
 
-    <!-- 3. Farming Stage -->
-    <label>Farming Stage:
-      <select id="farming_stage"></select>
+    <label>Stage:
+      <select id="INPUT_STAGE"></select>
     </label>
 
-    <!-- 4. Level -->
     <label>Level:
-      <select id="level"></select>
+      <select id="INPUT_LEVEL"></select>
     </label>
 
-    <!-- 5. Difficulty -->
     <label>Difficulty:
-      <select id="difficulty">
+      <select id="INPUT_DIFFICULTY">
         <option value="">Select</option>
         <option>Easy</option>
         <option>Medium</option>
@@ -43,53 +33,35 @@
 
     <hr>
 
-    <!-- 6. Essence per Video Chest -->
     <label>Essence per Video Chest:
-      <input type="number" id="essence_per_video" value="0">
+      <input type="number" id="INPUT_ESSENCE_PER_VIDEO_CHEST" value="100">
     </label>
 
-    <hr>
-
-    <!-- 7–9. Streaks -->
-    <label>Elemental Streak:
-      <select id="elemental_streak"></select>
-    </label>
-
-    <label>Equinox Streak:
-      <select id="equinox_streak"></select>
-    </label>
-
-    <label>Starbreaker Streak:
-      <select id="starbreaker_streak"></select>
-    </label>
-
-    <hr>
-
-    <!-- 10. Rough Guild Hunt Essence Bonus -->
-    <label>Rough Guild Hunt Essence Bonus:
-      <input type="number" id="guild_bonus" value="5000">
-    </label>
-
-    <!-- 11. Bonus Essence Rate -->
     <label>Bonus Essence Rate:
-      <select id="bonus_rate">
+      <select id="INPUT_BONUS_ESSENCE_RATE">
         <option value="0">+0%</option>
         <option value="0.5">+50%</option>
-        <option value="1.0">+100%</option>
+        <option value="1.0" selected>+100%</option>
       </select>
     </label>
 
-    <!-- 12. Target -->
-    <label>Target:
-      <input type="number" id="target" value="0">
+    <label>Guild Hunt Bonus (Static):
+      <input type="number" id="INPUT_STATIC_BONUS_ESSENCE_GUILD_HUNT" value="5000">
+    </label>
+
+    <label>Target Essence:
+      <input type="number" id="TARGET_ESSENCE" value="100000">
     </label>
 
     <hr>
 
-    <button type="button" onclick="calculate()">Calculate Essence</button>
+    <button type="button" onclick="calculate()">Run Simulation</button>
   </form>
 
-  <h2>Total Essence: <span id="result">0</span></h2>
+  <hr>
+
+  <h2>Output</h2>
+  <pre id="output"></pre>
 
   <script src="script.js"></script>
 </body>
