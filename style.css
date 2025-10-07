@@ -93,3 +93,32 @@ footer#disclaimer {
   transform: scale(1.08);
   filter: drop-shadow(0 0 12px #00ff88);
 }
+
+.tooltip {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 260px;
+  background-color: #111;
+  color: #0f0;
+  text-align: left;
+  border-radius: 6px;
+  padding: 6px 10px;
+  position: absolute;
+  z-index: 20;
+  bottom: 100%;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  border: 1px solid #0f0;
+  font-size: 12px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

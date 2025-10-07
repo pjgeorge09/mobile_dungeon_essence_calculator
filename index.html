@@ -34,20 +34,25 @@
     <hr>
 
     <label>Essence per Video Chest:
-      <input type="number" id="INPUT_ESSENCE_PER_VIDEO_CHEST" value="100">
+      <input type="number" id="INPUT_ESSENCE_PER_VIDEO_CHEST" value="83">
     </label>
 
-    <label>Bonus Essence Rate:
-      <select id="INPUT_BONUS_ESSENCE_RATE">
-        <option value="0">+0%</option>
-        <option value="0.5">+50%</option>
-        <option value="1.0" selected>+100%</option>
-      </select>
-    </label>
+    <div class="tooltip">
+        <label>Bonus Essence Rate:</label>
+        <select id="INPUT_BONUS_ESSENCE_RATE">
+            <option value="0">+0%</option>
+            <option value="0.5">+50%</option>
+            <option value="1.0">+100%</option>
+        </select>
+        <span class="tooltiptext">Weekend event bonus for one day increase</span>
+    </div>
 
-    <label>Guild Hunt Bonus (Static):
-      <input type="number" id="INPUT_STATIC_BONUS_ESSENCE_GUILD_HUNT" value="5000">
-    </label>
+    <div class="tooltip">
+        <label>Guild Hunt Bonus (Static):</label>
+        <input type="number" id="INPUT_STATIC_BONUS_ESSENCE_GUILD_HUNT" value="5000">
+        <span class="tooltiptext">The rough total you gain weekly from Guild Hunt, including from Streak Rewards</span>
+    </div>
+
 
     <label>Target Essence:
       <input type="number" id="TARGET_ESSENCE" value="100000">
