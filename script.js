@@ -55,7 +55,22 @@ function calculate() {
   // --- Data ---
   const essence_data = {
     17: { Easy: { num: 70, b: 75 }, Medium: { num: 77, b: 82 }, Hard: { num: 85, b: 90 } },
-    16: { Easy: { num: 65, b: 71 }, Medium: { num: 71, b: 77 }, Hard: { num: 80, b: 85 } }
+    16: { Easy: { num: 65, b: 71 }, Medium: { num: 71, b: 77 }, Hard: { num: 80, b: 85 } },
+    15: { Easy: { num: 60, b: 66 }, Medium: { num: 65, b: 71 }, Hard: { num: 72, b: 78 } },
+    14: { Easy: { num: 55, b: 61 }, Medium: { num: 61, b: 68 }, Hard: { num: 68, b: 75 } },
+    13: { Easy: { num: 50, b: 55 }, Medium: { num: 55, b: 62 }, Hard: { num: 62, b: 68 } },
+    12: { Easy: { num: 48, b: 52 }, Medium: { num: 53, b: 59 }, Hard: { num: 59, b: 65 } },
+    11: { Easy: { num: 42, b: 46 }, Medium: { num: 47, b: 52 }, Hard: { num: 52, b: 58 } },
+    10: { Easy: { num: 32, b: 42 }, Medium: { num: 36, b: 47 }, Hard: { num: 40, b: 52 } },
+    9: { Easy: { num: 29, b: 32 }, Medium: { num: 32, b: 36 }, Hard: { num: 36, b: 40 } },
+    8: { Easy: { num: 26, b: 29 }, Medium: { num: 30, b: 33 }, Hard: { num: 33, b: 36 } },
+    7: { Easy: { num: 22, b: 25 }, Medium: { num: 25, b: 28 }, Hard: { num: 28, b: 31 } },
+    6: { Easy: { num: 21, b: 23 }, Medium: { num: 23, b: 26 }, Hard: { num: 26, b: 29 } },
+    5: { Easy: { num: 18, b: 20 }, Medium: { num: 20, b: 22 }, Hard: { num: 23, b: 25 } },
+    4: { Easy: { num: 17, b: 18 }, Medium: { num: 19, b: 21 }, Hard: { num: 21, b: 23 } },
+    3: { Easy: { num: 16, b: 18 }, Medium: { num: 18, b: 20 }, Hard: { num: 20, b: 22 } },
+    2: { Easy: { num: 14, b: 15 }, Medium: { num: 15, b: 17 }, Hard: { num: 17, b: 19 } },
+    1: { Easy: { num: 8, b: 9 }, Medium: { num: 9, b: 10 }, Hard: { num: 10, b: 11 } }
   };
   const rate_data = { "1-4": 0.65, "5-8": 0.7, "9-10": 0.8, b: 0.65 };
 
