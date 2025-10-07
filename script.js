@@ -172,9 +172,9 @@ function calculate() {
 //   log(`Purchasable essence per week : ${essence_purchased_per_week.toFixed(2)}`);
   const total_essence_on_bonus_week_with_purchase =
     total_essence_on_bonus_week + essence_purchased_per_week;
-  log(`\n---\nTotal Essence on bonus week of ${INPUT_BONUS_ESSENCE_RATE} : ${total_essence_on_bonus_week_with_purchase.toFixed(2)}`);
+  log(`\n---\nTotal Essence on bonus week of ${(1+INPUT_BONUS_ESSENCE_RATE)*100}% : ${total_essence_on_bonus_week_with_purchase.toFixed(2)}`);
   log(`Average Daily : ${(total_essence_on_bonus_week_with_purchase / 7).toFixed(2)}`);
 
   const WEEKS_TO_TARGET = TARGET_ESSENCE / total_essence_on_bonus_week_with_purchase;
-  log(`Weeks to target essence : ${WEEKS_TO_TARGET.toFixed(2)}`);
+  log(`Weeks to target ${TARGET_ESSENCE.toFixed(2)} Essence : ${WEEKS_TO_TARGET.toFixed(2)}`);
 }
