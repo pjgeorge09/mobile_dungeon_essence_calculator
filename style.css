@@ -86,7 +86,7 @@ footer#disclaimer {
 }
 
 #coffee-support img {
-  width: 140px;             /* smaller fixed size */
+  width: 80px;             /* smaller fixed size */
   height: auto;
   cursor: pointer;
   transition: transform 0.2s ease, filter 0.2s ease;
