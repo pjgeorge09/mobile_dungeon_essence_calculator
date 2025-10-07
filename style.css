@@ -52,3 +52,18 @@ pre {
   overflow-x: auto;
   white-space: pre-wrap;
 }
+
+footer#disclaimer {
+  margin-top: 40px;
+  padding: 12px 20px;
+  background: #1a1a1a;
+  color: #aaa;
+  font-size: 12px;
+  width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid #333;
+  border-radius: 0 0 8px 8px;
+  text-align: center;
+  line-height: 1.4;
+}
