@@ -90,7 +90,7 @@ function calculate() {
   }
 
   const ESSENCE_PER_LEVEL = get_essence_value(INPUT_STAGE, INPUT_LEVEL, INPUT_DIFFICULTY);
-  log(`Essence rate is set to ${ESSENCE_PER_LEVEL.toFixed(2)} average for ${INPUT_STAGE}-${INPUT_LEVEL} on ${INPUT_DIFFICULTY}`);
+  log(`Avg Essence Per Level : ${ESSENCE_PER_LEVEL.toFixed(2)}   for ${INPUT_STAGE}-${INPUT_LEVEL} on ${INPUT_DIFFICULTY}`);
 
   // Video ads
   const VIDEO_AD_CHESTS_LIMIT_PER_DAY = 5;
@@ -121,7 +121,7 @@ function calculate() {
 
   const keys_per_week =
     (base_keys_per_day + regular_store_keys_daily + resource_store_keys_daily) * 7 + guild_store_keys_weekly;
-  log(`Keys per week : ${keys_per_week}. (${((base_keys_per_day + regular_store_keys_daily + resource_store_keys_daily) * 7)} daily, plus ${guild_store_keys_weekly} from guild store)`);
+//   log(`Keys per week : ${keys_per_week}. (${((base_keys_per_day + regular_store_keys_daily + resource_store_keys_daily) * 7)} daily, plus ${guild_store_keys_weekly} from guild store)`);
 
   const beer_per_week =
     (beer_total_daily * 7) + guild_store_beer_weekly + arena_store_beer_weekly;
@@ -139,17 +139,17 @@ function calculate() {
         STARBREAKER_160_ = true;
 
   let guilt_hunt_essence_weekly = 0;
-  if (ELEMENTAL_80_) guilt_hunt_essence_weekly += 150;
-  if (ELEMENTAL_160_) guilt_hunt_essence_weekly += 300;
-  if (EQUINOX_80_) guilt_hunt_essence_weekly += 150;
-  if (EQUINOX_160_) guilt_hunt_essence_weekly += 300;
-  if (STARBREAKER_80_) guilt_hunt_essence_weekly += 150;
-  if (STARBREAKER_160_) guilt_hunt_essence_weekly += 300;
+//   if (ELEMENTAL_80_) guilt_hunt_essence_weekly += 150;
+//   if (ELEMENTAL_160_) guilt_hunt_essence_weekly += 300;
+//   if (EQUINOX_80_) guilt_hunt_essence_weekly += 150;
+//   if (EQUINOX_160_) guilt_hunt_essence_weekly += 300;
+//   if (STARBREAKER_80_) guilt_hunt_essence_weekly += 150;
+//   if (STARBREAKER_160_) guilt_hunt_essence_weekly += 300;
 
   guilt_hunt_essence_weekly += INPUT_STATIC_BONUS_ESSENCE_GUILD_HUNT;
-  log(`Guild hunt streak bonuses added to weekly : ${guilt_hunt_essence_weekly}`);
+//   log(`Essence from Guild Hunt : ${guilt_hunt_essence_weekly}`);
   essence_purchased_per_week += guilt_hunt_essence_weekly;
-  log(`Updated essence per week (purchased+guild hunt) : ${essence_purchased_per_week}`);
+//   log(`Updated essence per week (purchased+guild hunt) : ${essence_purchased_per_week}`);
 
   // Bonus week calculation
   const ONE_DAY_BEER = beer_total_daily;
@@ -162,14 +162,14 @@ function calculate() {
     (beer_total_daily + SAVEABLE_BEER + arena_store_beer_weekly + guild_store_beer_weekly) /
     6 * ESSENCE_PER_LEVEL * (1 + INPUT_BONUS_ESSENCE_RATE);
 
-  log(`Five days no bonuses earned ${five_day_earned_essence.toFixed(2)} a day, for ${(five_day_earned_essence * 5).toFixed(2)}`);
-  log(`Light day prepping for bonus earns : ${partial_day_earned_essence.toFixed(2)}`);
-  log(`Bonus day @${INPUT_BONUS_ESSENCE_RATE} : ${bonus_day_earned_essence.toFixed(2)}`);
+  log(`Five standard game days earn ${five_day_earned_essence.toFixed(2)} a day, for ${(five_day_earned_essence * 5).toFixed(2)} total`);
+  log(`Pre-Essence Bonus Day : ${partial_day_earned_essence.toFixed(2)}`);
+  log(`Bonus day at ${(1+INPUT_BONUS_ESSENCE_RATE)*100}% : ${bonus_day_earned_essence.toFixed(2)}`);
 
   const total_essence_on_bonus_week =
     (five_day_earned_essence * 5) + partial_day_earned_essence + bonus_day_earned_essence;
 
-  log(`Purchasable essence per week : ${essence_purchased_per_week.toFixed(2)}`);
+//   log(`Purchasable essence per week : ${essence_purchased_per_week.toFixed(2)}`);
   const total_essence_on_bonus_week_with_purchase =
     total_essence_on_bonus_week + essence_purchased_per_week;
   log(`\n---\nTotal Essence on bonus week of ${INPUT_BONUS_ESSENCE_RATE} : ${total_essence_on_bonus_week_with_purchase.toFixed(2)}`);
