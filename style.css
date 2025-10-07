@@ -94,15 +94,18 @@ footer#disclaimer {
   filter: drop-shadow(0 0 12px #00ff88);
 }
 
+
+/* ===== Tooltip styling (placed at the bottom of style.css) ===== */
 .tooltip {
   position: relative;
-  display: block;
-  margin-bottom: 10px;
+  display: inline-block;     /* prevents label-block inheritance */
+  width: 100%;               /* keep alignment with input width */
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 260px;
+  opacity: 0;
+  width: 240px;
   background-color: #111;
   color: #0f0;
   text-align: left;
@@ -110,15 +113,23 @@ footer#disclaimer {
   padding: 6px 10px;
   position: absolute;
   z-index: 20;
-  bottom: 100%;
+  bottom: 115%;              /* positions tooltip above the element */
   left: 0;
-  opacity: 0;
-  transition: opacity 0.25s ease;
   border: 1px solid #0f0;
   font-size: 12px;
+  line-height: 1.4;
+  transition: opacity 0.25s ease;
+  box-shadow: 0 0 8px #00ff66;
+  pointer-events: none;
 }
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+/* (optional) ensure labels don’t interfere */
+.tooltip label {
+  display: block;
+  margin-bottom: 4px;
 }
