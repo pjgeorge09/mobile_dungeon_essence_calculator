@@ -53,7 +53,7 @@ pre {
   white-space: pre-wrap;
 }
 
-#disclaimer {
+footer#disclaimer {
   display: flex;
   justify-content: space-between;  /* pushes content to opposite sides */
   align-items: center;             /* vertically aligns text and image */
