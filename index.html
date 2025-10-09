@@ -55,7 +55,38 @@
     <div class="tooltip">
         <label>Guild Hunt Bonus (Static):</label>
         <input type="number" id="INPUT_STATIC_BONUS_ESSENCE_GUILD_HUNT" value="5000">
-        <span class="tooltiptext">The rough total you gain weekly from Guild Hunt, including from Streak Rewards</span>
+        <span class="tooltiptext">
+          The rough total you gain weekly from Guild Hunt, including from Streak Rewards.<br><br>
+          <strong>Essence equation per guild hunt battle:</strong><br>
+          essence = 6 × (StageDiedOn) + 30<br><br>
+          <strong>Streak Bonus Essence Table</strong><br>
+          <table style="border-collapse: collapse; margin-top: 4px; width: 100%;">
+              <thead>
+                  <tr>
+                      <th style="border: 1px solid #aaa; padding: 4px;">Type</th>
+                      <th style="border: 1px solid #aaa; padding: 4px;">Streak 80</th>
+                      <th style="border: 1px solid #aaa; padding: 4px;">Streak 160</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td style="border: 1px solid #aaa; padding: 4px;">Elemental</td>
+                      <td style="border: 1px solid #aaa; padding: 4px; text-align: center;">150</td>
+                      <td style="border: 1px solid #aaa; padding: 4px; text-align: center;">300</td>
+                  </tr>
+                  <tr>
+                      <td style="border: 1px solid #aaa; padding: 4px;">Equinox</td>
+                      <td style="border: 1px solid #aaa; padding: 4px; text-align: center;">150</td>
+                      <td style="border: 1px solid #aaa; padding: 4px; text-align: center;">300</td>
+                  </tr>
+                  <tr>
+                      <td style="border: 1px solid #aaa; padding: 4px;">StarBreaker</td>
+                      <td style="border: 1px solid #aaa; padding: 4px; text-align: center;">150</td>
+                      <td style="border: 1px solid #aaa; padding: 4px; text-align: center;">300</td>
+                  </tr>
+              </tbody>
+          </table>
+      </span>
     </div>
 
 
@@ -80,7 +111,7 @@
   <p>
     Developer is not associated with Playa Games, Mobile Dungeon RPG Crawler, Shakes &amp; Fidget, nor their associated properties.
     This tool is intended solely for free use and mathematical analysis to assess progression rates in a public game.<br>
-    Version : 0.0.12<br>
+    Version : 0.0.13<br>
     Planned Features : Twitch Rewards, Optional weekly Hourglass uses (will always be calculated on bonus essence day)
   </p>
 
